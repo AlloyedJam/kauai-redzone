@@ -1,0 +1,32 @@
+h1 {
+  margin: 0px;
+}
+
+.Header-Background {
+  /* position: absolute; */
+  margin: 0px;
+  padding: 0;
+  height: 90px;
+  left: 0px;
+  top: 0px;
+
+  background: linear-gradient(180deg, rgba(47, 15, 137, 0.55) 0%, rgba(255, 255, 255, 0) 100%), #5CF5FF;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.Header-Text {
+  text-align: center;
+  margin-top: 50;
+  padding-top: 15px;
+  left: 0;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 56px;
+
+  color: #FFFFFF;
+
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.53);
+}
