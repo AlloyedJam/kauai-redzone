@@ -17,6 +17,13 @@
   color: white;
 }
 
+.Map1 {
+  width: 75vw;
+  height: 75vh;
+  margin-left: 13%;
+  margin-top: 4.5%;
+}
+
 .Ocean-background {
   z-index: 1;
 

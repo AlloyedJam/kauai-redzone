@@ -1,6 +1,9 @@
 import React from 'react';
-import kauai from '../images/kauai.jpg'
-import '../StyleSheets/Segment.css'
+import kauai from '../images/kauai.jpg';
+import '../StyleSheets/Segment.css';
+import { loadCss } from 'esri-loader';
+import * as ReactDOM from 'react-dom';
+import { Map } from '@esri/react-arcgis';
 
 class Segment extends React.Component {
   constructor(props) {
@@ -20,7 +23,14 @@ class Segment extends React.Component {
 
     if (this.props.background == 1) {
       return(
-        <div className="Background-Picture" style={{top: height}}></div>
+        <div>
+          <div className="Background-Picture" style={{top: height}}>
+          </div>
+
+          <div>
+            
+          </div>
+        </div>
       )
     } else if (this.props.background == 2) {
       return(

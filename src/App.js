@@ -1,12 +1,21 @@
 import React from 'react';
 import Segment from './Components/Segment.js';
-import Header from './Components/Header.js'
+import Header from './Components/Header.js';
+import * as ReactDOM from 'react-dom';
+import { Scene } from '@esri/react-arcgis';
+import { setDefaultOptions, loadModules } from 'esri-loader';
 import './App.css';
 
-import beach from './images/beach.jpg'
-import kauai from './images/kauai.jpeg'
+import beach from './images/beach.jpg';
+import kauai from './images/kauai.jpeg';
 
 function App() {
+  setDefaultOptions({ css: true });
+
+  loadModules(['esri/views/MapView', 'esri/WebMap'])
+  .then(([MapView, WebMap]) => {
+    // the styles, script, and modules have all been loaded (in that order)
+  });
 
   return (
     <div>
@@ -16,6 +25,16 @@ function App() {
 
       <div className="Middle-Layer">
         <Segment segment={0} background={1}/>
+        <div>
+          <Scene
+          className="Map1"
+          mapProperties={{ basemap: 'satellite' }}
+          viewProperties={{
+              center: [20.5, 158],
+              zoom: 11
+          }}
+          />
+        </div>
         <Segment segment={1}
           title={'What does sea level rise means for Hawaii?'}
           background={2}
@@ -27,7 +46,7 @@ function App() {
           background={2}
           msg=
           {
-            'Potential damages to infrastructure and disruption to the economy'
+            'Could result in potential damages to infrastructure and disruption to the economy'
           }
           image={kauai}
         />
