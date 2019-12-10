@@ -17,7 +17,7 @@
   left: 0px;
   object-fit: cover;
 
-  
+
   box-sizing: border-box;
 }
 
@@ -31,7 +31,7 @@ h1 {
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
-  font-size: 48px;
+  font-size: calc(20px + 1.5vw);
   line-height: 56px;
 
   color: #3847E0;
@@ -41,7 +41,7 @@ h1 {
 
 p {
   padding-top: 15px;
-  padding-left: 44px;
+  padding-left: calc(14px + 1.5vw);
   width: 50%;
   height: 452px;
   left: calc(50% - 591px/2 - 312.5px);
@@ -50,7 +50,7 @@ p {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 26px;
+  font-size: calc(14px + 0.3vw);
   line-height: 30px;
 
   color: #000000;
@@ -64,6 +64,7 @@ p {
   transform: translate(-50%, -50%);
 
   width: 90%;
+  max-width: 1300px;
   height: 683px;
 
   background: #FFFFFF;
@@ -74,11 +75,9 @@ p {
 }
 
 .Box-image {
-  margin: 0;
-  position: absolute;
-  top: 55%;
-  left: 76%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  margin-left: 56%;
+  top: -460px;
 
   width: 40%;
   height: 65%;
